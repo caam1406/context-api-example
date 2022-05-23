@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { UseSharedState } from './hooks/useShareState';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
+    {/* // Add context to all components wtih  <UseSharedState></UseSharedState> */}
+    <UseSharedState>
     <App />
+    </UseSharedState>
   </React.StrictMode>
 );
 
